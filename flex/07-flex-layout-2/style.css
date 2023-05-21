@@ -27,3 +27,68 @@ body {
   box-shadow: 2px 4px 16px rgba(0,0,0,.06);
   border-radius: 4px;
 }
+
+/* ### Self Check
+- There is 32px padding around the 'cards' section.
+- The cards are arranged horizontally, but wrap to multiple lines when they run out of room on the page. */
+
+body,
+.header,
+.sidebar,
+.container,
+.footer,
+.link-and-card {
+  display: flex;
+}
+
+.header {
+  font-size: 32px;
+  font-weight: 900;
+  padding: 0 16px;
+  align-items: center;
+}
+
+body {
+  flex-direction: column;
+}
+
+.footer {
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+}
+
+.link-and-card {
+  flex-grow: 1;
+}
+
+.container {
+  flex-wrap: wrap;
+  padding: 32px;
+  gap: 32px;
+}
+
+.card {
+  max-width: 250px;
+}
+
+.sidebar {
+  flex-shrink: 0;
+  font-size: 24px;
+  padding: 16px;
+}
+
+.sidebar>ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar>ul>li {
+  margin-bottom: 10px;
+}
+
+.sidebar>ul>li>a {
+  text-decoration: none;
+  color: white;
+}
